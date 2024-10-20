@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 })
 
 //MIDDLEWARE
-app.use(cors()) // here as our server is running on different local add and frontend on different so this cross origin allows frontend to access server from any port number
+app.use(cors({ origin: 'https://21-bcp-240-front.vercel.app/' })) // here as our server is running on different local add and frontend on different so this cross origin allows frontend to access server from any port number
 app.use(bodyParser.json()) // in order to make json data from client side other wise middleware wont accept it
 app.use('/todos', todoRouter) //middleware
  
