@@ -1,0 +1,105 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #50c878;
+    --accent-color: #ff6b6b;
+    --bg-color: #f0f4f8;
+    --text-color: #333;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: var(--text-color);
+}
+
+.todo-manager {
+    width: 90%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.todo-title {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.input-container {
+    border: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+}
+
+.input-group input {
+    flex-grow: 1;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 3px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.input-group button {
+    margin-left: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo-item span.done {
+    text-decoration: line-through;
+    color: #272424;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.todo-actions button {
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    border: outline;
+    border-radius: 45%;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-success { background-color: var(--secondary-color); }
+.btn-warning { background-color: #ffc107; color: #212529; }
+.btn-danger { background-color: var(--accent-color); }
+
+@media (min-width: 750px) {
+    .input-container {
+        flex-direction: row;
+    }
+    .input-group {
+        width: 48%;
+    }
+}

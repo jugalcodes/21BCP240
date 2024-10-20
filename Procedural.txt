@@ -1,0 +1,50 @@
+1. Create 2 folders namely Backend and Frontend
+
+                                BACKEND PORTION =>
+1. cd Backend   
+    1.1 npm init -y
+    1.2 npm i express dotenv body-parser cors mongoose
+2. create index.js 
+3. .env file creation
+    3.1 in order to mention the port we can hardcode it or create .env file and mention there as we are deploying so go for .env
+
+MONGODB SETUP =>
+1. Create Cluster name "Todo-App"
+2. Create Database with name "Todo-App" and name collections name as "Todo-Data"
+3. Go to Database Access and add user via editing the user name and password + defining the role for access.
+4. connecting the Database  
+    4.1 go to Database  
+    4.2 click connect
+    4.3 drivers
+    4.4 go with default that is node and given version
+    4.5 copy the string for password,etc
+    4.6 copy that into .env file and <password> update this with db password
+    4.7 also add db name after mongo.db.net/<db name>
+    4.8 connect the db with vs code and include it in index.js file
+
+USE POSTMAN 
+
+5. todoModel.js
+    5.1 require the schema and mention the necessary schmemas with valid datatype and require statement
+
+6. todoController.js
+    6.1 this file will help control the routes and validate them. 
+    6.2 in this apply all the try catches corresponding to the error 
+
+7. todoRouter.js
+    7.1 this will contain the routes of the file with there HTTP methods
+    7.2 in order to fetch the data use "GET"
+    7.3 for updating purpose use "PUT"
+    7.4 for delete use "DELETE"
+    7.5 for post a new todo use "POST"
+    7.6 and also mention the corresponding routes to them and in update and delete process we used "ID"
+
+
+                        FRONTEND PORTION =>
+
+1. npx create-react-app frontend then go to frontend
+2. download the dependencies react-icons react-toastify and bootstrap
+
+3. TodoManager.js
+    3.1 create the skeleton 
+    3.2 now optimize the skeleton and name the divs with margin and paddings
